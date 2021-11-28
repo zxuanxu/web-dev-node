@@ -25,6 +25,9 @@ app.get('/hello', (req, res) => {
 require('./services/movies-service')(app);
 require('./services/tweets-service')(app);
 require('./services/profile-service')(app);
-require('./movies/service')(app);
+require('./db/movies/service')(app);
+require('./services/tweets-db-service')(app);
+require('./services/who-service')(app);
+require('./services/profile-db-service')(app);
 
 app.listen(process.env.PORT || 4000);
